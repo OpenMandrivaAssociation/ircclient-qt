@@ -17,9 +17,7 @@ Source:     	http://bitbucket.org/jpnurmi/libircclient-qt/downloads/libircclient
 Patch0:		libircclient-qt-configure.diff
 BuildRequires:  icu-devel
 BuildRequires:	qt4-devel
-%if %mdkversion < 200800
 BuildRoot:  %{_tmppath}/%{name}-%{version}
-%endif
 
 %description
 IRCclient-qt is a fully Qt-based library to create IRC clients.
@@ -43,11 +41,6 @@ Requires:  	qt4-devel
 
 %description    -n %{develname}
 IRCclient-qt is a fully Qt-based library to create IRC clients.
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %prep 
 %setup -q -n libircclient-qt-%{version}
