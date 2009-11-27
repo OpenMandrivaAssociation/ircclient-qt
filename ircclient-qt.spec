@@ -6,21 +6,23 @@
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		    %{name}
+Version:	    %{version}
+Release:	    %{release}
 Summary:    	A cross-platform IRC client library written with Qt 4
 License:    	GPLv2+
 Group:      	Networking/Other
 URL:        	http://bitbucket.org/jpnurmi/libircclient-qt/wiki/Home
 Source:     	http://bitbucket.org/jpnurmi/libircclient-qt/downloads/libircclient-qt-src-%{version}.tar.gz
-Patch0:		libircclient-qt-configure.diff
+Patch0:		    libircclient-qt-configure.diff
 BuildRequires:  icu-devel
 BuildRequires:	qt4-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 IRCclient-qt is a fully Qt-based library to create IRC clients.
+
+#--------------------------------------------------------------------
 
 %package -n     %{libname}
 Summary:        Main library for ircclient-qt
@@ -30,17 +32,33 @@ Provides:       %{name} = %{version}-%{release}
 %description -n %{libname}
 IRCclient-qt is a fully Qt-based library to create IRC clients.
 
+%files -n %{libname}
+%defattr(-,root,root)
+%doc doc/*
+%{_libdir}/libircclient-qt.so.%{major}*
+
+#--------------------------------------------------------------------
 
 %package        -n     %{develname}
 Summary:        Header files for the ircclient-qt library
 Group:          Development/C
 Requires:       %{libname} = %{version}
 Provides:       %{name}-devel = %{version}-%{release}
-Requires:  	icu-devel
-Requires:  	qt4-devel
+Requires:  	    icu-devel
+Requires:  	    qt4-devel
 
 %description    -n %{develname}
-IRCclient-qt is a fully Qt-based library to create IRC clients.
+This package includes the header files you will need to compile applications
+for %name .
+
+%files  -n %{develname}
+%doc examples/*
+%defattr(-,root,root)
+%{qt4include}/ircclient-qt/*
+%{_libdir}/libircclient-qt.so
+%{qt4dir}/mkspecs/features/libircclient-qt.prf
+
+#--------------------------------------------------------------------
 
 %prep 
 %setup -q -n libircclient-qt-%{version}
@@ -57,19 +75,4 @@ INSTALL_ROOT=%{?buildroot:%{buildroot}} %makeinstall_std
 
 %clean
 %{__rm} -rf %{buildroot}
-
-%files -n %{libname}
-%defattr(-,root,root)
-%doc doc/*
-%{_libdir}/libircclient-qt.so.%{major}*
-
-
-%files  -n %{develname}
-%doc examples/*
-%defattr(-,root,root)
-%{qt4include}/ircclient-qt/*
-%{_libdir}/libircclient-qt.so
-%{qt4dir}/mkspecs/features/libircclient-qt.prf
-
-
 
