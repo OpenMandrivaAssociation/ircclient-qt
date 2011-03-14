@@ -1,6 +1,6 @@
 %define name    ircclient-qt
 %define version 0.3.2
-%define release %mkrel 5
+%define release %mkrel 6
 %define major 1
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
