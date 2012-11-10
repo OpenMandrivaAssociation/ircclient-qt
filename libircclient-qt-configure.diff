@@ -1,0 +1,6 @@
+diff -Naur libircclient-qt-0.3.2/configure libircclient-qt-0.3.2.dlucio/configure
+--- libircclient-qt-0.3.2/configure     1969-12-31 18:00:00.000000000 -0600
++++ libircclient-qt-0.3.2.dlucio/configure      2009-11-26 18:44:38.606949284 -0600
+@@ -0,0 +1 @@
++#!/bin/sh
+
