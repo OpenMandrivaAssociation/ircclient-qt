@@ -75,3 +75,45 @@ INSTALL_ROOT=%{?buildroot:%{buildroot}} %makeinstall_std
 %clean
 %{__rm} -rf %{buildroot}
 
+
+
+%changelog
+* Sun Jun 05 2011 Funda Wang <fwang@mandriva.org> 0.3.2-8mdv2011.0
++ Revision: 682814
+- rebuild for new icu
+
+* Sun Mar 20 2011 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 0.3.2-7
++ Revision: 647070
+- Rebuild
+
+* Mon Mar 14 2011 Funda Wang <fwang@mandriva.org> 0.3.2-6
++ Revision: 644573
+- rebuild for new icu
+
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 0.3.2-5mdv2011.0
++ Revision: 612407
+- the mass rebuild of 2010.1 packages
+
+* Sun Mar 21 2010 Funda Wang <fwang@mandriva.org> 0.3.2-4mdv2010.1
++ Revision: 526117
+- rebuild for new icu
+
+* Fri Mar 19 2010 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 0.3.2-3mdv2010.1
++ Revision: 525152
+- Rebuild
+
+* Fri Nov 27 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.3.2-2mdv2010.1
++ Revision: 470451
+- Fix lib name
+- Clean Spec
+    - Move file lists on package section
+    - Fix description on the devel package
+- Remove support for old releases no supported anymore
+
+* Fri Nov 27 2009 Luis Daniel Lucio Quiroz <dlucio@mandriva.org> 0.3.2-1mdv2010.1
++ Revision: 470426
+- import ircclient-qt
+
+
+* Thu Nov 26 2009 Daniel Lucio <dlucio@okay.com.mx> 0.3.2-1mdv2010.0
+- First package
