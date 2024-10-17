@@ -11,7 +11,7 @@ Release:	    %{release}
 Summary:    	A cross-platform IRC client library written with Qt 4
 License:    	GPLv2+
 Group:      	Networking/Other
-URL:        	http://bitbucket.org/jpnurmi/libircclient-qt/wiki/Home
+URL:        	https://bitbucket.org/jpnurmi/libircclient-qt/wiki/Home
 Source:     	http://bitbucket.org/jpnurmi/libircclient-qt/downloads/libircclient-qt-src-%{version}.tar.gz
 Patch0:		    libircclient-qt-configure.diff
 BuildRequires:  icu-devel
