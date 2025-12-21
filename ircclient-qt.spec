@@ -14,6 +14,11 @@ Group:      	Networking/Other
 URL:        	https://bitbucket.org/jpnurmi/libircclient-qt/wiki/Home
 Source:     	http://bitbucket.org/jpnurmi/libircclient-qt/downloads/libircclient-qt-src-%{version}.tar.gz
 Patch0:		    libircclient-qt-configure.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  icu-devel
 BuildRequires:	qt4-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}
